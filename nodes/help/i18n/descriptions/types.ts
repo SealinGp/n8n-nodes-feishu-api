@@ -1,0 +1,197 @@
+/**
+ * Type definition for DESCRIPTIONS displayName translations
+ */
+export interface IDescriptionNames {
+	TENANT_TOKEN_TIP: string;
+	INTERACTIVE_TOKEN: string;
+	FILE_BINARY_FIELD: string;
+	MEDIA_FILE_TOKENS: string;
+	MEDIA_FILE_TOKEN: string;
+	PARENT_TYPE: string;
+	PARENT_NODE: string;
+	JSON_OUTPUT: string;
+	SHEET_VALUES: string;
+	MATCH_CASE: string;
+	MATCH_ENTIRE_CELL: string;
+	SEARCH_BY_REGEX: string;
+	INCLUDE_FORMULAS: string;
+	CELL_RANGE: string;
+	START_INDEX: string;
+	END_INDEX: string;
+	MAJOR_DIMENSION: string;
+	SHEET_INDEX: string;
+	SHEET_ID: string;
+	CHAT_ID: string;
+	SYNC_TOKEN: string;
+	ANCHOR_TIME: string;
+	MAX_ATTENDEE_NUM: string;
+	NEED_ATTENDEE: string;
+	NEED_MEETING_SETTINGS: string;
+	NEED_NOTIFICATION: string;
+	CALENDAR_EVENT_ID: string;
+	ONLY_BUSY: string;
+	INCLUDE_EXTERNAL_CALENDAR: string;
+	START_TIME: string;
+	END_TIME: string;
+	CALENDAR_ID: string;
+	ARRAY_JSON: string;
+	OFFSET: string;
+	COUNT: string;
+	SEARCH_KEY: string;
+	SEARCH_FILE_TYPE: string;
+	DEPARTMENT_ID_TYPE: string;
+	INCLUDE_RESIGNED: string;
+	ORDER_BY: string;
+	DIRECTION: string;
+	FILE_TOKEN: string;
+	SPACE_FILE_TYPE: string;
+	NAME: string;
+	CONVERT_BLOCK_CONTENT_TYPE: string;
+	CONVERT_BLOCK_CONTENT: string;
+	SPREADSHEET_ID: string;
+	DOCUMENT_BLOCK_ID: string;
+	DOCUMENT_REVISION_ID: string;
+	DOCUMENT_ID: string;
+	TITLE: string;
+	FILE_DURATION: string;
+	FILE_NAME: string;
+	MESSAGE_UPLOAD_FILE_TYPE: string;
+	BINARY_PROPERTY_NAME: string;
+	OUTPUT_AS_BINARY: string;
+	DOWNLOAD_RESOURCE: string;
+	RECEIVE_MESSAGE_TYPES: string;
+	RESOURCE_KEY: string;
+	RESOURCE_TYPE: string;
+	MESSAGE_REPLY_IN_THREAD: string;
+	MESSAGE_ID: string;
+	MESSAGE_CONTENT: string;
+	MESSAGE_TYPE: string;
+	RECEIVE_ID_TYPE: string;
+	CALENDAR_COLOR: string;
+	CALENDAR_SUMMARY_ALIAS: string;
+	CALENDAR_PERMISSIONS: string;
+	CALENDAR_DESCRIPTION: string;
+	CALENDAR_TITLE: string;
+	MEMBER_ID: string;
+	MEMBER_ID_TYPE: string;
+	BASE_ROLE_ID: string;
+	TEXT_FIELD_AS_ARRAY: string;
+	TABLE_FIELD_ID: string;
+	AUTOMATIC_FIELDS: string;
+	WITH_SHARED_URL: string;
+	TABLE_RECORD_ID: string;
+	TABLE_VIEW_PROPERTY: string;
+	TABLE_VIEW_ID: string;
+	TABLE_VIEW_TYPE: string;
+	TABLE_VIEW_NAME: string;
+	PAGE_SIZE: string;
+	PAGE_TOKEN: string;
+	WHETHER_PAGING: string;
+	NEW_NAME: string;
+	IS_ADVANCED: string;
+	WHETHER_COPY_CONTENT: string;
+	TIME_ZONE: string;
+	FOLDER_TOKEN: string;
+	BASE_APP_NAME: string;
+	REQUEST_BODY: string;
+	REQUEST_ID: string;
+	USER_ID_TYPE: string;
+	BASE_APP_TOKEN: string;
+	RECORD_IDS: string;
+	BASE_TABLE_ID: string;
+	IGNORE_CONSISTENCY_CHECK: string;
+	CALENDAR_EVENT_ATTENDEES: string;
+	INSTANCE_START_TIME_ADMIN: string;
+	IS_ENABLE_ADMIN: string;
+	ADD_OPERATOR_TO_ATTENDEE: string;
+	CALENDAR_EVENT_ATTENDEE_IDS: string;
+	CALENDAR_EVENT_DELETE_IDS: string;
+	NEED_RESOURCE_CUSTOMIZATION: string;
+	MEETING_CHAT_ID: string;
+
+	// Option names for PARENT_TYPE
+	PARENT_TYPE_BITABLE_FILE: string;
+	PARENT_TYPE_BITABLE_IMAGE: string;
+	PARENT_TYPE_CCM_IMPORT_OPEN: string;
+	PARENT_TYPE_SHEET_FILE: string;
+	PARENT_TYPE_SHEET_IMAGE: string;
+	PARENT_TYPE_DOCX_FILE: string;
+	PARENT_TYPE_DOCX_IMAGE: string;
+	PARENT_TYPE_VC_VIRTUAL_BG: string;
+
+	// Option names for SEARCH_FILE_TYPE
+	SEARCH_FILE_TYPE_BITABLE: string;
+	SEARCH_FILE_TYPE_DOC: string;
+	SEARCH_FILE_TYPE_FILE: string;
+	SEARCH_FILE_TYPE_MINDNOTE: string;
+	SEARCH_FILE_TYPE_SLIDES: string;
+	SEARCH_FILE_TYPE_SPREADSHEET: string;
+
+	// Option names for SPACE_FILE_TYPE
+	SPACE_FILE_TYPE_BITABLE: string;
+	SPACE_FILE_TYPE_DOC: string;
+	SPACE_FILE_TYPE_DOCX: string;
+	SPACE_FILE_TYPE_FOLDER: string;
+	SPACE_FILE_TYPE_MINDNOTE: string;
+	SPACE_FILE_TYPE_SHORTCUT: string;
+	SPACE_FILE_TYPE_SLIDES: string;
+	SPACE_FILE_TYPE_SPREADSHEET: string;
+
+	// Option names for MESSAGE_UPLOAD_FILE_TYPE
+	MESSAGE_UPLOAD_FILE_TYPE_DOC: string;
+	MESSAGE_UPLOAD_FILE_TYPE_MP4: string;
+	MESSAGE_UPLOAD_FILE_TYPE_OPUS: string;
+	MESSAGE_UPLOAD_FILE_TYPE_PDF: string;
+	MESSAGE_UPLOAD_FILE_TYPE_PPT: string;
+	MESSAGE_UPLOAD_FILE_TYPE_STREAM: string;
+	MESSAGE_UPLOAD_FILE_TYPE_XLS: string;
+
+	// Option names for RECEIVE_MESSAGE_TYPES
+	MESSAGE_TYPE_IMAGE: string;
+	MESSAGE_TYPE_FILE: string;
+	MESSAGE_TYPE_RICH_TEXT: string;
+	MESSAGE_TYPE_AUDIO: string;
+	MESSAGE_TYPE_VIDEO: string;
+	MESSAGE_TYPE_CARD: string;
+	MESSAGE_TYPE_LOCATION: string;
+	MESSAGE_TYPE_TODO: string;
+	MESSAGE_TYPE_CALENDAR_EVENT: string;
+	MESSAGE_TYPE_TEXT: string;
+
+	// Option names for RESOURCE_TYPE
+	RESOURCE_TYPE_IMAGE: string;
+	RESOURCE_TYPE_FILE: string;
+
+	// Option names for MESSAGE_TYPE
+	MSG_TYPE_AUDIO: string;
+	MSG_TYPE_FILE: string;
+	MSG_TYPE_IMAGE: string;
+	MSG_TYPE_INTERACTIVE: string;
+	MSG_TYPE_POST: string;
+	MSG_TYPE_SHARE_CHAT: string;
+	MSG_TYPE_SHARE_USER: string;
+	MSG_TYPE_STICKER: string;
+	MSG_TYPE_SYSTEM: string;
+	MSG_TYPE_TEXT: string;
+	MSG_TYPE_MEDIA: string;
+
+	// Option names for CALENDAR_PERMISSIONS
+	CALENDAR_PERMISSIONS_PRIVATE: string;
+	CALENDAR_PERMISSIONS_SHOW_ONLY_FREE_BUSY: string;
+	CALENDAR_PERMISSIONS_PUBLIC: string;
+
+	// Option names for TABLE_VIEW_TYPE
+	TABLE_VIEW_TYPE_FORM: string;
+	TABLE_VIEW_TYPE_GALLERY: string;
+	TABLE_VIEW_TYPE_GANTT: string;
+	TABLE_VIEW_TYPE_GRID: string;
+	TABLE_VIEW_TYPE_KANBAN: string;
+
+	// Option names for ORDER_BY
+	ORDER_BY_EDITED_TIME: string;
+	ORDER_BY_CREATED_TIME: string;
+
+	// Option names for DIRECTION
+	DIRECTION_ASC: string;
+	DIRECTION_DESC: string;
+}

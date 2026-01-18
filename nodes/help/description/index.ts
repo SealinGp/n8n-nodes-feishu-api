@@ -1,16 +1,19 @@
 import { FileType, MessageType } from '../type/enums';
 import { OBJECT_JSON } from './base';
+import { DESCRIPTION_NAMES } from '../i18n/descriptions';
+
+const t = DESCRIPTION_NAMES;
 
 export const DESCRIPTIONS = {
 	TENANT_TOKEN_TIP: {
-		displayName: `Only work with <a target="_blank" href="https://open.feishu.cn/document/server-docs/authentication-management/access-token/tenant_access_token_internal">Tenant Token.</a>`,
+		displayName: t.TENANT_TOKEN_TIP,
 		name: 'notice',
 		type: 'notice',
 		default: '',
 	},
 
 	INTERACTIVE_TOKEN: {
-		displayName: 'Token',
+		displayName: t.INTERACTIVE_TOKEN,
 		name: 'interactive_token',
 		type: 'string',
 		typeOptions: { password: true },
@@ -20,7 +23,7 @@ export const DESCRIPTIONS = {
 	},
 
 	FILE_BINARY_FIELD: {
-		displayName: 'File Binary Field(文件二进制字段)',
+		displayName: t.FILE_BINARY_FIELD,
 		name: 'file_binary_field',
 		type: 'string',
 		required: true,
@@ -29,7 +32,7 @@ export const DESCRIPTIONS = {
 	},
 
 	MEDIA_FILE_TOKENS: {
-		displayName: 'Media File Tokens(素材文件 Token 数组)',
+		displayName: t.MEDIA_FILE_TOKENS,
 		description: 'The tokens of multiple media files',
 		name: 'media_file_tokens',
 		type: 'json',
@@ -39,7 +42,7 @@ export const DESCRIPTIONS = {
 	},
 
 	MEDIA_FILE_TOKEN: {
-		displayName: 'Media File Token(素材文件token)',
+		displayName: t.MEDIA_FILE_TOKEN,
 		description: 'The token of a media file',
 		name: 'media_file_token',
 		type: 'string',
@@ -51,18 +54,18 @@ export const DESCRIPTIONS = {
 	},
 
 	PARENT_TYPE: {
-		displayName: 'Upload Point Type(上传点的类型)',
+		displayName: t.PARENT_TYPE,
 		name: 'parent_type',
 		type: 'options',
 		options: [
-			{ name: 'Bitable File(多维表格文件)', value: 'bitable_file' },
-			{ name: 'Bitable Image(多维表格图片)', value: 'bitable_image' },
-			{ name: 'File to Import Into Docs(云文档导入文件)', value: 'ccm_import_open' },
-			{ name: 'Sheet File(电子表格文件)', value: 'sheet_file' },
-			{ name: 'Sheet Image(电子表格图片)', value: 'sheet_image' },
-			{ name: 'Upgraded Docs File(新版文档文件)', value: 'docx_file' },
-			{ name: 'Upgraded Docs Image(新版文档图片)', value: 'docx_image' },
-			{ name: 'VC Virtual Background(vc 虚拟背景)', value: 'vc_virtual_background' },
+			{ name: t.PARENT_TYPE_BITABLE_FILE, value: 'bitable_file' },
+			{ name: t.PARENT_TYPE_BITABLE_IMAGE, value: 'bitable_image' },
+			{ name: t.PARENT_TYPE_CCM_IMPORT_OPEN, value: 'ccm_import_open' },
+			{ name: t.PARENT_TYPE_SHEET_FILE, value: 'sheet_file' },
+			{ name: t.PARENT_TYPE_SHEET_IMAGE, value: 'sheet_image' },
+			{ name: t.PARENT_TYPE_DOCX_FILE, value: 'docx_file' },
+			{ name: t.PARENT_TYPE_DOCX_IMAGE, value: 'docx_image' },
+			{ name: t.PARENT_TYPE_VC_VIRTUAL_BG, value: 'vc_virtual_background' },
 		],
 		required: true,
 		default: 'bitable_file',
@@ -70,7 +73,7 @@ export const DESCRIPTIONS = {
 	},
 
 	PARENT_NODE: {
-		displayName: 'Upload Point Token(上传点的token)',
+		displayName: t.PARENT_NODE,
 		name: 'parent_node',
 		type: 'string',
 		required: true,
@@ -80,7 +83,7 @@ export const DESCRIPTIONS = {
 	},
 
 	JSON_OUTPUT: {
-		displayName: 'JSON',
+		displayName: t.JSON_OUTPUT,
 		name: 'jsonOutput',
 		type: 'json',
 		typeOptions: {
@@ -90,7 +93,7 @@ export const DESCRIPTIONS = {
 	},
 
 	SHEET_VALUES: {
-		displayName: 'Values(数据)',
+		displayName: t.SHEET_VALUES,
 		name: 'values',
 		type: 'json',
 		required: true,
@@ -98,35 +101,35 @@ export const DESCRIPTIONS = {
 	},
 
 	MATCH_CASE: {
-		displayName: 'Match Case(忽略大小写)',
+		displayName: t.MATCH_CASE,
 		name: 'matchCase',
 		type: 'boolean',
 		default: false,
 	},
 
 	MATCH_ENTIRE_CELL: {
-		displayName: 'Match Entire Cell(完全匹配整个单元格)',
+		displayName: t.MATCH_ENTIRE_CELL,
 		name: 'matchEntireCell',
 		type: 'boolean',
 		default: false,
 	},
 
 	SEARCH_BY_REGEX: {
-		displayName: 'Search By Regex(使用正则表达式查找)',
+		displayName: t.SEARCH_BY_REGEX,
 		name: 'searchByRegex',
 		type: 'boolean',
 		default: false,
 	},
 
 	INCLUDE_FORMULAS: {
-		displayName: 'Include Formulas(仅搜索单元格公式)',
+		displayName: t.INCLUDE_FORMULAS,
 		name: 'includeFormulas',
 		type: 'boolean',
 		default: false,
 	},
 
 	CELL_RANGE: {
-		displayName: 'Cell Range(单元格范围)',
+		displayName: t.CELL_RANGE,
 		name: 'range',
 		type: 'string',
 		default: '',
@@ -138,7 +141,7 @@ export const DESCRIPTIONS = {
 	},
 
 	START_INDEX: {
-		displayName: 'Start Index(起始位置)',
+		displayName: t.START_INDEX,
 		name: 'startIndex',
 		type: 'number',
 		required: true,
@@ -150,7 +153,7 @@ export const DESCRIPTIONS = {
 	},
 
 	END_INDEX: {
-		displayName: 'End Index(结束位置)',
+		displayName: t.END_INDEX,
 		name: 'endIndex',
 		type: 'number',
 		required: true,
@@ -162,7 +165,7 @@ export const DESCRIPTIONS = {
 	},
 
 	MAJOR_DIMENSION: {
-		displayName: 'Dimension to Be Added(更新的维度)',
+		displayName: t.MAJOR_DIMENSION,
 		name: 'majorDimension',
 		type: 'options',
 		options: [
@@ -174,7 +177,7 @@ export const DESCRIPTIONS = {
 	},
 
 	SHEET_INDEX: {
-		displayName: 'Sheet Index(工作表索引)',
+		displayName: t.SHEET_INDEX,
 		name: 'sheet_index',
 		type: 'number',
 		default: 0,
@@ -185,7 +188,7 @@ export const DESCRIPTIONS = {
 	},
 
 	SHEET_ID: {
-		displayName: 'Sheet ID(工作表 ID)',
+		displayName: t.SHEET_ID,
 		name: 'sheet_id',
 		type: 'resourceLocator',
 		default: { mode: 'id', value: '' },
@@ -213,7 +216,7 @@ export const DESCRIPTIONS = {
 	},
 
 	CHAT_ID: {
-		displayName: 'Chat ID(聊天 ID)',
+		displayName: t.CHAT_ID,
 		name: 'chat_id',
 		type: 'string',
 		required: true,
@@ -221,7 +224,7 @@ export const DESCRIPTIONS = {
 	},
 
 	SYNC_TOKEN: {
-		displayName: 'Sync Token(增量同步标记)',
+		displayName: t.SYNC_TOKEN,
 		name: 'sync_token',
 		type: 'string',
 		typeOptions: { password: true },
@@ -230,7 +233,7 @@ export const DESCRIPTIONS = {
 	},
 
 	ANCHOR_TIME: {
-		displayName: 'Anchor Time(时间锚点)',
+		displayName: t.ANCHOR_TIME,
 		name: 'anchor_time',
 		type: 'string',
 		default: '',
@@ -239,7 +242,7 @@ export const DESCRIPTIONS = {
 	},
 
 	MAX_ATTENDEE_NUM: {
-		displayName: 'Max Attendee Number(返回的最大参与人数量)',
+		displayName: t.MAX_ATTENDEE_NUM,
 		name: 'max_attendee_num',
 		type: 'number',
 		typeOptions: {
@@ -251,14 +254,14 @@ export const DESCRIPTIONS = {
 	},
 
 	NEED_ATTENDEE: {
-		displayName: 'Need Attendee(是否需要返回参与人信息)',
+		displayName: t.NEED_ATTENDEE,
 		name: 'need_attendee',
 		type: 'boolean',
 		default: false,
 	},
 
 	NEED_MEETING_SETTINGS: {
-		displayName: 'Need Meeting Settings(是否需要返回飞书视频会议(VC)会前设置)',
+		displayName: t.NEED_MEETING_SETTINGS,
 		name: 'need_meeting_settings',
 		type: 'boolean',
 		default: false,
@@ -266,7 +269,7 @@ export const DESCRIPTIONS = {
 	},
 
 	NEED_NOTIFICATION: {
-		displayName: 'Need Notification(是否发送通知)',
+		displayName: t.NEED_NOTIFICATION,
 		name: 'need_notification',
 		type: 'boolean',
 		default: true,
@@ -274,7 +277,7 @@ export const DESCRIPTIONS = {
 	},
 
 	CALENDAR_EVENT_ID: {
-		displayName: 'Calendar Event ID(日程 ID)',
+		displayName: t.CALENDAR_EVENT_ID,
 		name: 'calendar_event_id',
 		type: 'resourceLocator',
 		default: { mode: 'id', value: '' },
@@ -302,21 +305,21 @@ export const DESCRIPTIONS = {
 	},
 
 	ONLY_BUSY: {
-		displayName: 'Only Busy(是否只查询忙碌日程信息)',
+		displayName: t.ONLY_BUSY,
 		name: 'only_busy',
 		type: 'boolean',
 		default: true,
 	},
 
 	INCLUDE_EXTERNAL_CALENDAR: {
-		displayName: 'Include External Calendar(是否包含外部日历)',
+		displayName: t.INCLUDE_EXTERNAL_CALENDAR,
 		name: 'include_external_calendar',
 		type: 'boolean',
 		default: true,
 	},
 
 	START_TIME: {
-		displayName: 'Start Time(开始时间)',
+		displayName: t.START_TIME,
 		name: 'start_time',
 		type: 'dateTime',
 		default: '',
@@ -324,7 +327,7 @@ export const DESCRIPTIONS = {
 	},
 
 	END_TIME: {
-		displayName: 'End Time(结束时间)',
+		displayName: t.END_TIME,
 		name: 'end_time',
 		type: 'dateTime',
 		default: '',
@@ -332,7 +335,7 @@ export const DESCRIPTIONS = {
 	},
 
 	CALENDAR_ID: {
-		displayName: 'Calendar ID(日历 ID)',
+		displayName: t.CALENDAR_ID,
 		name: 'calendar_id',
 		required: true,
 		type: 'resourceLocator',
@@ -360,14 +363,14 @@ export const DESCRIPTIONS = {
 	},
 
 	ARRAY_JSON: {
-		displayName: 'Array JSON(数组 JSON)',
+		displayName: t.ARRAY_JSON,
 		name: 'array_json',
 		type: 'json',
 		default: [],
 	},
 
 	OFFSET: {
-		displayName: 'Offset(偏移量)',
+		displayName: t.OFFSET,
 		name: 'offset',
 		type: 'number',
 		default: 0,
@@ -378,7 +381,7 @@ export const DESCRIPTIONS = {
 	},
 
 	COUNT: {
-		displayName: 'Count(返回数量)',
+		displayName: t.COUNT,
 		name: 'count',
 		type: 'number',
 		default: 20,
@@ -390,7 +393,7 @@ export const DESCRIPTIONS = {
 	},
 
 	SEARCH_KEY: {
-		displayName: 'Search Key(搜索关键字)',
+		displayName: t.SEARCH_KEY,
 		name: 'search_key',
 		type: 'string',
 		default: '',
@@ -398,34 +401,22 @@ export const DESCRIPTIONS = {
 	},
 
 	SEARCH_FILE_TYPE: {
-		displayName: 'Search File Type(搜索文件类型)',
+		displayName: t.SEARCH_FILE_TYPE,
 		name: 'search_file_type',
 		type: 'multiOptions',
 		default: [],
 		options: [
-			{ name: 'Bitable(多维表格)', value: FileType.Bitable },
-			{ name: 'Doc(文档)', value: FileType.Doc },
-			{
-				name: 'File(文件)',
-				value: FileType.File,
-			},
-			{
-				name: 'Mindnote(思维笔记)',
-				value: FileType.Mindnote,
-			},
-			{
-				name: 'Slides(幻灯片)',
-				value: FileType.Slides,
-			},
-			{
-				name: 'Spreadsheet(电子表格)',
-				value: FileType.Sheet,
-			},
+			{ name: t.SEARCH_FILE_TYPE_BITABLE, value: FileType.Bitable },
+			{ name: t.SEARCH_FILE_TYPE_DOC, value: FileType.Doc },
+			{ name: t.SEARCH_FILE_TYPE_FILE, value: FileType.File },
+			{ name: t.SEARCH_FILE_TYPE_MINDNOTE, value: FileType.Mindnote },
+			{ name: t.SEARCH_FILE_TYPE_SLIDES, value: FileType.Slides },
+			{ name: t.SEARCH_FILE_TYPE_SPREADSHEET, value: FileType.Sheet },
 		],
 	},
 
 	DEPARTMENT_ID_TYPE: {
-		displayName: 'Department ID Type(部门ID类型)',
+		displayName: t.DEPARTMENT_ID_TYPE,
 		name: 'department_id_type',
 		type: 'options',
 		options: [
@@ -436,7 +427,7 @@ export const DESCRIPTIONS = {
 	},
 
 	INCLUDE_RESIGNED: {
-		displayName: 'Include Resigned(是否包含离职员工)',
+		displayName: t.INCLUDE_RESIGNED,
 		name: 'include_resigned',
 		type: 'boolean',
 		description: 'Whether the query results contain user information of resigned employees',
@@ -444,29 +435,29 @@ export const DESCRIPTIONS = {
 	},
 
 	ORDER_BY: {
-		displayName: 'Order By(排序方式)',
+		displayName: t.ORDER_BY,
 		name: 'order_by',
 		type: 'options',
 		default: 'EditedTime',
 		options: [
-			{ name: 'Edited Time | 按编辑时间排序', value: 'EditedTime' },
-			{ name: 'Created Time | 按创建时间排序', value: 'CreatedTime' },
+			{ name: t.ORDER_BY_EDITED_TIME, value: 'EditedTime' },
+			{ name: t.ORDER_BY_CREATED_TIME, value: 'CreatedTime' },
 		],
 	},
 
 	DIRECTION: {
-		displayName: 'Direction(排序方向)',
+		displayName: t.DIRECTION,
 		name: 'direction',
 		type: 'options',
 		default: 'DESC',
 		options: [
-			{ name: 'ASC | 升序', value: 'ASC' },
-			{ name: 'DESC | 降序', value: 'DESC' },
+			{ name: t.DIRECTION_ASC, value: 'ASC' },
+			{ name: t.DIRECTION_DESC, value: 'DESC' },
 		],
 	},
 
 	FILE_TOKEN: {
-		displayName: 'File Token(文件唯一标识)',
+		displayName: t.FILE_TOKEN,
 		name: 'file_token',
 		required: true,
 		type: 'resourceLocator',
@@ -494,49 +485,25 @@ export const DESCRIPTIONS = {
 	},
 
 	SPACE_FILE_TYPE: {
-		displayName: 'File Type(文件类型)',
+		displayName: t.SPACE_FILE_TYPE,
 		name: 'space_file_type',
 		type: 'multiOptions',
 		default: [],
 		required: true,
 		options: [
-			{
-				name: 'Bitable(多维表格)',
-				value: FileType.Bitable,
-			},
-			{
-				name: 'Doc(文档)',
-				value: FileType.Doc,
-			},
-			{
-				name: 'Docx(新版文档类型)',
-				value: FileType.Docx,
-			},
-			{
-				name: 'Folder(文件夹)',
-				value: FileType.Folder,
-			},
-			{
-				name: 'Mindnote(思维笔记)',
-				value: FileType.Mindnote,
-			},
-			{
-				name: 'Shortcut(快捷方式)',
-				value: FileType.Shortcut,
-			},
-			{
-				name: 'Slides(幻灯片)',
-				value: FileType.Slides,
-			},
-			{
-				name: 'Spreadsheet(电子表格)',
-				value: FileType.Sheet,
-			},
+			{ name: t.SPACE_FILE_TYPE_BITABLE, value: FileType.Bitable },
+			{ name: t.SPACE_FILE_TYPE_DOC, value: FileType.Doc },
+			{ name: t.SPACE_FILE_TYPE_DOCX, value: FileType.Docx },
+			{ name: t.SPACE_FILE_TYPE_FOLDER, value: FileType.Folder },
+			{ name: t.SPACE_FILE_TYPE_MINDNOTE, value: FileType.Mindnote },
+			{ name: t.SPACE_FILE_TYPE_SHORTCUT, value: FileType.Shortcut },
+			{ name: t.SPACE_FILE_TYPE_SLIDES, value: FileType.Slides },
+			{ name: t.SPACE_FILE_TYPE_SPREADSHEET, value: FileType.Sheet },
 		],
 	},
 
 	NAME: {
-		displayName: 'Name(名称)',
+		displayName: t.NAME,
 		name: 'name',
 		type: 'string',
 		default: '',
@@ -544,7 +511,7 @@ export const DESCRIPTIONS = {
 	},
 
 	CONVERT_BLOCK_CONTENT_TYPE: {
-		displayName: 'Content Type(内容类型)',
+		displayName: t.CONVERT_BLOCK_CONTENT_TYPE,
 		name: 'content_type',
 		type: 'options',
 		default: 'markdown',
@@ -556,7 +523,7 @@ export const DESCRIPTIONS = {
 	},
 
 	CONVERT_BLOCK_CONTENT: {
-		displayName: 'Markdown/HTML Content(Markdown/HTML 内容)',
+		displayName: t.CONVERT_BLOCK_CONTENT,
 		name: 'content',
 		type: 'string',
 		default: '',
@@ -564,7 +531,7 @@ export const DESCRIPTIONS = {
 	},
 
 	SPREADSHEET_ID: {
-		displayName: 'Spreadsheet ID(电子表格 ID)',
+		displayName: t.SPREADSHEET_ID,
 		name: 'spreadsheet_id',
 		type: 'resourceLocator',
 		default: { mode: 'id', value: '' },
@@ -592,7 +559,7 @@ export const DESCRIPTIONS = {
 	},
 
 	DOCUMENT_BLOCK_ID: {
-		displayName: 'Parent Block ID(父块 ID)',
+		displayName: t.DOCUMENT_BLOCK_ID,
 		name: 'block_id',
 		type: 'string',
 		default: '',
@@ -601,7 +568,7 @@ export const DESCRIPTIONS = {
 	},
 
 	DOCUMENT_REVISION_ID: {
-		displayName: 'Document Version ID(文档版本)',
+		displayName: t.DOCUMENT_REVISION_ID,
 		name: 'document_revision_id',
 		type: 'number',
 		typeOptions: {
@@ -614,7 +581,7 @@ export const DESCRIPTIONS = {
 	},
 
 	DOCUMENT_ID: {
-		displayName: 'Document ID(文档 ID)',
+		displayName: t.DOCUMENT_ID,
 		name: 'document_id',
 		type: 'resourceLocator',
 		default: { mode: 'id', value: '' },
@@ -643,7 +610,7 @@ export const DESCRIPTIONS = {
 	},
 
 	TITLE: {
-		displayName: 'Title(标题)',
+		displayName: t.TITLE,
 		name: 'title',
 		type: 'string',
 		default: '',
@@ -651,7 +618,7 @@ export const DESCRIPTIONS = {
 	},
 
 	FILE_DURATION: {
-		displayName: 'File Duration(文件时长)',
+		displayName: t.FILE_DURATION,
 		name: 'file_duration',
 		type: 'number',
 		default: 0,
@@ -667,7 +634,7 @@ export const DESCRIPTIONS = {
 	},
 
 	FILE_NAME: {
-		displayName: 'File Name(文件名称)',
+		displayName: t.FILE_NAME,
 		name: 'file_name',
 		type: 'string',
 		default: '',
@@ -675,47 +642,35 @@ export const DESCRIPTIONS = {
 	},
 
 	MESSAGE_UPLOAD_FILE_TYPE: {
-		displayName: 'File Type(文件类型)',
+		displayName: t.MESSAGE_UPLOAD_FILE_TYPE,
 		name: 'file_type',
 		type: 'options',
 		options: [
+			{ name: t.MESSAGE_UPLOAD_FILE_TYPE_DOC, value: 'doc' },
 			{
-				name: 'DOC(文档)',
-				value: 'doc',
-			},
-			{
-				name: 'MP4(视频)',
+				name: t.MESSAGE_UPLOAD_FILE_TYPE_MP4,
 				value: 'mp4',
 				description: 'Only supports mp4 format for video',
 			},
 			{
-				name: 'OPUS(音频)',
+				name: t.MESSAGE_UPLOAD_FILE_TYPE_OPUS,
 				value: 'opus',
 				description: 'Only supports opus format for audio',
 			},
+			{ name: t.MESSAGE_UPLOAD_FILE_TYPE_PDF, value: 'pdf' },
+			{ name: t.MESSAGE_UPLOAD_FILE_TYPE_PPT, value: 'ppt' },
 			{
-				name: 'PDF',
-				value: 'pdf',
-			},
-			{
-				name: 'PPT(幻灯片)',
-				value: 'ppt',
-			},
-			{
-				name: 'Stream(流)',
+				name: t.MESSAGE_UPLOAD_FILE_TYPE_STREAM,
 				value: 'stream',
 				description: 'For other format that not listed',
 			},
-			{
-				name: 'XLS(表格)',
-				value: 'xls',
-			},
+			{ name: t.MESSAGE_UPLOAD_FILE_TYPE_XLS, value: 'xls' },
 		],
 		default: 'opus',
 	},
 
 	BINARY_PROPERTY_NAME: {
-		displayName: 'Binary Field(二进制字段名称)',
+		displayName: t.BINARY_PROPERTY_NAME,
 		name: 'binaryPropertyName',
 		type: 'string',
 		default: 'data',
@@ -725,7 +680,7 @@ export const DESCRIPTIONS = {
 	},
 
 	OUTPUT_AS_BINARY: {
-		displayName: 'Output as Binary(以二进制输出)',
+		displayName: t.OUTPUT_AS_BINARY,
 		name: 'outputAsBinary',
 		type: 'boolean',
 		default: true,
@@ -734,7 +689,7 @@ export const DESCRIPTIONS = {
 	},
 
 	DOWNLOAD_RESOURCE: {
-		displayName: 'Whether Download Resource(是否下载资源)',
+		displayName: t.DOWNLOAD_RESOURCE,
 		name: 'downloadResource',
 		type: 'boolean',
 		default: false,
@@ -754,57 +709,57 @@ export const DESCRIPTIONS = {
 	},
 
 	RECEIVE_MESSAGE_TYPES: {
-		displayName: 'Message Type(消息类型)',
+		displayName: t.RECEIVE_MESSAGE_TYPES,
 		name: 'messageTypes',
 		type: 'multiOptions',
 		options: [
 			{
-				name: 'Image(图片)',
+				name: t.MESSAGE_TYPE_IMAGE,
 				value: MessageType.Image,
 				description: MessageType.Image,
 			},
 			{
-				name: 'File(文件)',
+				name: t.MESSAGE_TYPE_FILE,
 				value: MessageType.File,
 				description: MessageType.File,
 			},
 			{
-				name: 'Rich Text(富文本)',
+				name: t.MESSAGE_TYPE_RICH_TEXT,
 				value: MessageType.RichText,
 				description: MessageType.RichText,
 			},
 			{
-				name: 'Audio(音频)',
+				name: t.MESSAGE_TYPE_AUDIO,
 				value: MessageType.Audio,
 				description: MessageType.Audio,
 			},
 			{
-				name: 'Video(视频)',
+				name: t.MESSAGE_TYPE_VIDEO,
 				value: MessageType.Video,
 				description: MessageType.Video,
 			},
 			{
-				name: 'Card(卡片)',
+				name: t.MESSAGE_TYPE_CARD,
 				value: MessageType.Card,
 				description: MessageType.Card,
 			},
 			{
-				name: '位置(Location)',
+				name: t.MESSAGE_TYPE_LOCATION,
 				value: MessageType.Location,
 				description: MessageType.Location,
 			},
 			{
-				name: 'Todo(任务)',
+				name: t.MESSAGE_TYPE_TODO,
 				value: MessageType.Todo,
 				description: MessageType.Todo,
 			},
 			{
-				name: 'Calendar Event(日程)',
+				name: t.MESSAGE_TYPE_CALENDAR_EVENT,
 				value: MessageType.CalendarEvent,
 				description: MessageType.CalendarEvent,
 			},
 			{
-				name: 'Text(文本)',
+				name: t.MESSAGE_TYPE_TEXT,
 				value: MessageType.Text,
 				description: MessageType.Text,
 			},
@@ -814,7 +769,7 @@ export const DESCRIPTIONS = {
 	},
 
 	RESOURCE_KEY: {
-		displayName: 'Resource Key(资源唯一标识)',
+		displayName: t.RESOURCE_KEY,
 		name: 'file_key',
 		type: 'string',
 		required: true,
@@ -823,17 +778,17 @@ export const DESCRIPTIONS = {
 	},
 
 	RESOURCE_TYPE: {
-		displayName: 'Resource Type(资源类型)',
+		displayName: t.RESOURCE_TYPE,
 		name: 'type',
 		type: 'options',
 		options: [
 			{
-				name: 'Image(图片)',
+				name: t.RESOURCE_TYPE_IMAGE,
 				value: 'image',
 				description: 'The image in the content',
 			},
 			{
-				name: 'File(文件)',
+				name: t.RESOURCE_TYPE_FILE,
 				value: 'file',
 				description: 'The file, audio, video (except emoticons) in the content',
 			},
@@ -842,7 +797,7 @@ export const DESCRIPTIONS = {
 	},
 
 	MESSAGE_REPLY_IN_THREAD: {
-		displayName: 'Whether Reply in Thread(是否以话题形式回复)',
+		displayName: t.MESSAGE_REPLY_IN_THREAD,
 		name: 'reply_in_thread',
 		type: 'boolean',
 		default: false,
@@ -851,7 +806,7 @@ export const DESCRIPTIONS = {
 	},
 
 	MESSAGE_ID: {
-		displayName: 'Message ID(消息ID)',
+		displayName: t.MESSAGE_ID,
 		name: 'message_id',
 		type: 'string',
 		required: true,
@@ -859,35 +814,35 @@ export const DESCRIPTIONS = {
 	},
 
 	MESSAGE_CONTENT: {
-		displayName: 'Message Content(消息内容)',
+		displayName: t.MESSAGE_CONTENT,
 		require: true,
 		...OBJECT_JSON,
 		name: 'content',
 	},
 
 	MESSAGE_TYPE: {
-		displayName: 'Message Type(消息类型)',
+		displayName: t.MESSAGE_TYPE,
 		name: 'msg_type',
 		type: 'options',
 		options: [
-			{ name: 'Audio(语音)', value: 'audio' },
-			{ name: 'File(文件)', value: 'file' },
-			{ name: 'Image(图片)', value: 'image' },
-			{ name: 'Interactive Card(卡片)', value: 'interactive' },
-			{ name: 'Rich Text(富文本)', value: 'post' },
-			{ name: 'Share Chat(分享群名片)', value: 'share_chat' },
-			{ name: 'Share User(分享个人名片)', value: 'share_user' },
-			{ name: 'Sticker(表情包)', value: 'sticker' },
-			{ name: 'System Message(系统消息)', value: 'system' },
-			{ name: 'Text(文本)', value: 'text' },
-			{ name: 'Video(视频)', value: 'media' },
+			{ name: t.MSG_TYPE_AUDIO, value: 'audio' },
+			{ name: t.MSG_TYPE_FILE, value: 'file' },
+			{ name: t.MSG_TYPE_IMAGE, value: 'image' },
+			{ name: t.MSG_TYPE_INTERACTIVE, value: 'interactive' },
+			{ name: t.MSG_TYPE_POST, value: 'post' },
+			{ name: t.MSG_TYPE_SHARE_CHAT, value: 'share_chat' },
+			{ name: t.MSG_TYPE_SHARE_USER, value: 'share_user' },
+			{ name: t.MSG_TYPE_STICKER, value: 'sticker' },
+			{ name: t.MSG_TYPE_SYSTEM, value: 'system' },
+			{ name: t.MSG_TYPE_TEXT, value: 'text' },
+			{ name: t.MSG_TYPE_MEDIA, value: 'media' },
 		],
 		required: true,
 		default: 'text',
 	},
 
 	RECEIVE_ID_TYPE: {
-		displayName: 'Receiver ID Type(接收者ID类型)',
+		displayName: t.RECEIVE_ID_TYPE,
 		name: 'receive_id_type',
 		type: 'options',
 		options: [
@@ -922,14 +877,14 @@ export const DESCRIPTIONS = {
 	},
 
 	CALENDAR_COLOR: {
-		displayName: 'Color(日历颜色)',
+		displayName: t.CALENDAR_COLOR,
 		name: 'color',
 		type: 'color',
 		default: '',
 	},
 
 	CALENDAR_SUMMARY_ALIAS: {
-		displayName: 'Summary Alias(日历备注名)',
+		displayName: t.CALENDAR_SUMMARY_ALIAS,
 		name: 'summary_alias',
 		type: 'string',
 		default: '',
@@ -938,20 +893,20 @@ export const DESCRIPTIONS = {
 	},
 
 	CALENDAR_PERMISSIONS: {
-		displayName: 'Permissions(日历公开范围)',
+		displayName: t.CALENDAR_PERMISSIONS,
 		name: 'permissions',
 		type: 'options',
 		options: [
-			{ name: 'Private | 私密', value: 'private' },
-			{ name: 'Show Only Free Busy | 仅展示忙闲信息', value: 'show_only_free_busy' },
-			{ name: 'Public | 公开，他人可查看日程详情', value: 'public' },
+			{ name: t.CALENDAR_PERMISSIONS_PRIVATE, value: 'private' },
+			{ name: t.CALENDAR_PERMISSIONS_SHOW_ONLY_FREE_BUSY, value: 'show_only_free_busy' },
+			{ name: t.CALENDAR_PERMISSIONS_PUBLIC, value: 'public' },
 		],
 		default: 'show_only_free_busy',
 		description: 'Calendar visibility range',
 	},
 
 	CALENDAR_DESCRIPTION: {
-		displayName: 'Description(日历描述)',
+		displayName: t.CALENDAR_DESCRIPTION,
 		name: 'description',
 		type: 'string',
 		default: '',
@@ -959,7 +914,7 @@ export const DESCRIPTIONS = {
 	},
 
 	CALENDAR_TITLE: {
-		displayName: 'Summary(日历标题)',
+		displayName: t.CALENDAR_TITLE,
 		name: 'summary',
 		type: 'string',
 		default: '',
@@ -967,7 +922,7 @@ export const DESCRIPTIONS = {
 	},
 
 	MEMBER_ID: {
-		displayName: 'Member ID(自定义角色协作者 ID)',
+		displayName: t.MEMBER_ID,
 		name: 'member_id',
 		type: 'resourceLocator',
 		default: { mode: 'id', value: '' },
@@ -996,7 +951,7 @@ export const DESCRIPTIONS = {
 	},
 
 	MEMBER_ID_TYPE: {
-		displayName: 'Member ID Type(协作者 ID 类型)',
+		displayName: t.MEMBER_ID_TYPE,
 		name: 'member_id_type',
 		type: 'options',
 		options: [
@@ -1011,7 +966,7 @@ export const DESCRIPTIONS = {
 	},
 
 	BASE_ROLE_ID: {
-		displayName: 'Role ID(自定义角色唯一标识)',
+		displayName: t.BASE_ROLE_ID,
 		name: 'role_id',
 		type: 'resourceLocator',
 		default: { mode: 'id', value: '' },
@@ -1040,7 +995,7 @@ export const DESCRIPTIONS = {
 	},
 
 	TEXT_FIELD_AS_ARRAY: {
-		displayName: 'Text Field as Array(字段描述数组形式返回)',
+		displayName: t.TEXT_FIELD_AS_ARRAY,
 		name: 'text_field_as_array',
 		type: 'boolean',
 		default: false,
@@ -1049,7 +1004,7 @@ export const DESCRIPTIONS = {
 	},
 
 	TABLE_FIELD_ID: {
-		displayName: 'Field ID(字段唯一标识)',
+		displayName: t.TABLE_FIELD_ID,
 		name: 'field_id',
 		type: 'resourceLocator',
 		default: { mode: 'id', value: '' },
@@ -1078,21 +1033,21 @@ export const DESCRIPTIONS = {
 	},
 
 	AUTOMATIC_FIELDS: {
-		displayName: 'Whether to Return Automatic Fields(是否返回自动计算的字段)',
+		displayName: t.AUTOMATIC_FIELDS,
 		name: 'automatic_fields',
 		type: 'boolean',
 		default: false,
 	},
 
 	WITH_SHARED_URL: {
-		displayName: 'Whether to Return Shared Link(是否返回记录的分享链接)',
+		displayName: t.WITH_SHARED_URL,
 		name: 'with_shared_url',
 		type: 'boolean',
 		default: false,
 	},
 
 	TABLE_RECORD_ID: {
-		displayName: 'Record ID(记录唯一标识)',
+		displayName: t.TABLE_RECORD_ID,
 		name: 'record_id',
 		type: 'string',
 		required: true,
@@ -1100,12 +1055,12 @@ export const DESCRIPTIONS = {
 	},
 
 	TABLE_VIEW_PROPERTY: {
-		displayName: 'View Property(视图属性)',
+		displayName: t.TABLE_VIEW_PROPERTY,
 		...OBJECT_JSON,
 	},
 
 	TABLE_VIEW_ID: {
-		displayName: 'View(视图)',
+		displayName: t.TABLE_VIEW_ID,
 		name: 'view_id',
 		type: 'resourceLocator',
 		default: { mode: 'id', value: '' },
@@ -1134,37 +1089,22 @@ export const DESCRIPTIONS = {
 	},
 
 	TABLE_VIEW_TYPE: {
-		displayName: 'View Type(视图类型)',
+		displayName: t.TABLE_VIEW_TYPE,
 		name: 'view_type',
 		required: true,
 		type: 'options',
 		options: [
-			{
-				name: 'Form View(表单视图)',
-				value: 'form',
-			},
-			{
-				name: 'Gallery View(画册视图)',
-				value: 'gallery',
-			},
-			{
-				name: 'Gantt View(甘特视图)',
-				value: 'gantt',
-			},
-			{
-				name: 'Grid View(表格视图)',
-				value: 'grid',
-			},
-			{
-				name: 'Kanban View(看板视图)',
-				value: 'kanban',
-			},
+			{ name: t.TABLE_VIEW_TYPE_FORM, value: 'form' },
+			{ name: t.TABLE_VIEW_TYPE_GALLERY, value: 'gallery' },
+			{ name: t.TABLE_VIEW_TYPE_GANTT, value: 'gantt' },
+			{ name: t.TABLE_VIEW_TYPE_GRID, value: 'grid' },
+			{ name: t.TABLE_VIEW_TYPE_KANBAN, value: 'kanban' },
 		],
 		default: 'grid',
 	},
 
 	TABLE_VIEW_NAME: {
-		displayName: 'View Name(视图名称)',
+		displayName: t.TABLE_VIEW_NAME,
 		name: 'view_name',
 		type: 'string',
 		required: true,
@@ -1174,7 +1114,7 @@ export const DESCRIPTIONS = {
 	},
 
 	PAGE_SIZE: {
-		displayName: 'Page Size(分页大小)',
+		displayName: t.PAGE_SIZE,
 		name: 'page_size',
 		type: 'number',
 		default: 20,
@@ -1186,7 +1126,7 @@ export const DESCRIPTIONS = {
 	},
 
 	PAGE_TOKEN: {
-		displayName: 'Page Token(分页标记)',
+		displayName: t.PAGE_TOKEN,
 		name: 'page_token',
 		type: 'string',
 		typeOptions: { password: true },
@@ -1201,14 +1141,14 @@ export const DESCRIPTIONS = {
 	},
 
 	WHETHER_PAGING: {
-		displayName: 'Whether Paging(是否分页)',
+		displayName: t.WHETHER_PAGING,
 		name: 'whether_paging',
 		type: 'boolean',
 		default: false,
 	},
 
 	NEW_NAME: {
-		displayName: 'New Name(新名称)',
+		displayName: t.NEW_NAME,
 		name: 'name',
 		type: 'string',
 		required: true,
@@ -1216,14 +1156,14 @@ export const DESCRIPTIONS = {
 	},
 
 	IS_ADVANCED: {
-		displayName: 'Turn on/off Advanced(是否开启高级权限)',
+		displayName: t.IS_ADVANCED,
 		name: 'is_advanced',
 		type: 'boolean',
 		default: false,
 	},
 
 	WHETHER_COPY_CONTENT: {
-		displayName: 'Copy the Content(是否复制内容)',
+		displayName: t.WHETHER_COPY_CONTENT,
 		name: 'without_content',
 		type: 'boolean',
 		default: false,
@@ -1232,7 +1172,7 @@ export const DESCRIPTIONS = {
 	},
 
 	TIME_ZONE: {
-		displayName: 'Time Zone(时区)',
+		displayName: t.TIME_ZONE,
 		name: 'time_zone',
 		type: 'string',
 		default: 'Asia/Shanghai',
@@ -1241,7 +1181,7 @@ export const DESCRIPTIONS = {
 	},
 
 	FOLDER_TOKEN: {
-		displayName: 'Folder Token(文件夹唯一标识)',
+		displayName: t.FOLDER_TOKEN,
 		name: 'folder_token',
 		type: 'resourceLocator',
 		default: { mode: 'id', value: '' },
@@ -1269,20 +1209,20 @@ export const DESCRIPTIONS = {
 	},
 
 	BASE_APP_NAME: {
-		displayName: 'App Name(多维表格名称)',
+		displayName: t.BASE_APP_NAME,
 		name: 'name',
 		type: 'string',
 		default: '',
 	},
 
 	REQUEST_BODY: {
-		displayName: 'Request Body(请求体)',
+		displayName: t.REQUEST_BODY,
 		require: true,
 		...OBJECT_JSON,
 	},
 
 	REQUEST_ID: {
-		displayName: 'Request ID',
+		displayName: t.REQUEST_ID,
 		name: 'request_id',
 		type: 'string',
 		default: '',
@@ -1290,7 +1230,7 @@ export const DESCRIPTIONS = {
 	},
 
 	USER_ID_TYPE: {
-		displayName: 'User ID Type(用户 ID 类型)',
+		displayName: t.USER_ID_TYPE,
 		name: 'user_id_type',
 		type: 'options',
 		options: [
@@ -1302,7 +1242,7 @@ export const DESCRIPTIONS = {
 	},
 
 	BASE_APP_TOKEN: {
-		displayName: 'Base App(多维表格)',
+		displayName: t.BASE_APP_TOKEN,
 		name: 'app_token',
 		type: 'resourceLocator',
 		default: { mode: 'id', value: '' },
@@ -1331,7 +1271,7 @@ export const DESCRIPTIONS = {
 	},
 
 	RECORD_IDS: {
-		displayName: 'Record IDs(记录 ID 列表)',
+		displayName: t.RECORD_IDS,
 		name: 'record_ids',
 		type: 'json',
 		default: '[]',
@@ -1340,7 +1280,7 @@ export const DESCRIPTIONS = {
 	},
 
 	BASE_TABLE_ID: {
-		displayName: 'Table(数据表)',
+		displayName: t.BASE_TABLE_ID,
 		name: 'table_id',
 		type: 'resourceLocator',
 		default: { mode: 'id', value: '' },
@@ -1369,7 +1309,7 @@ export const DESCRIPTIONS = {
 	},
 
 	IGNORE_CONSISTENCY_CHECK: {
-		displayName: 'Ignore Consistency Check(忽略一致性读写检查)',
+		displayName: t.IGNORE_CONSISTENCY_CHECK,
 		name: 'ignore_consistency_check',
 		type: 'boolean',
 		default: true,
@@ -1377,7 +1317,7 @@ export const DESCRIPTIONS = {
 	},
 
 	CALENDAR_EVENT_ATTENDEES: {
-		displayName: 'Attendees(参与人列表)',
+		displayName: t.CALENDAR_EVENT_ATTENDEES,
 		name: 'attendees',
 		type: 'json',
 		default: '[]',
@@ -1386,7 +1326,7 @@ export const DESCRIPTIONS = {
 	},
 
 	INSTANCE_START_TIME_ADMIN: {
-		displayName: 'Instance Start Time Admin(重复日程实例时间戳)',
+		displayName: t.INSTANCE_START_TIME_ADMIN,
 		name: 'instance_start_time_admin',
 		type: 'string',
 		default: '',
@@ -1395,7 +1335,7 @@ export const DESCRIPTIONS = {
 	},
 
 	IS_ENABLE_ADMIN: {
-		displayName: 'Enable Admin(启用会议室管理员身份)',
+		displayName: t.IS_ENABLE_ADMIN,
 		name: 'is_enable_admin',
 		type: 'boolean',
 		default: false,
@@ -1404,7 +1344,7 @@ export const DESCRIPTIONS = {
 	},
 
 	ADD_OPERATOR_TO_ATTENDEE: {
-		displayName: 'Add Operator to Attendee(添加操作人为参与人)',
+		displayName: t.ADD_OPERATOR_TO_ATTENDEE,
 		name: 'add_operator_to_attendee',
 		type: 'boolean',
 		default: false,
@@ -1412,7 +1352,7 @@ export const DESCRIPTIONS = {
 	},
 
 	CALENDAR_EVENT_ATTENDEE_IDS: {
-		displayName: 'Attendee IDs(需删除的参与人 ID 列表)',
+		displayName: t.CALENDAR_EVENT_ATTENDEE_IDS,
 		name: 'attendee_ids',
 		type: 'json',
 		default: '[]',
@@ -1421,7 +1361,7 @@ export const DESCRIPTIONS = {
 	},
 
 	CALENDAR_EVENT_DELETE_IDS: {
-		displayName: 'Delete IDs(参与人类型对应的 ID 列表)',
+		displayName: t.CALENDAR_EVENT_DELETE_IDS,
 		name: 'delete_ids',
 		type: 'json',
 		default: '[]',
@@ -1430,7 +1370,7 @@ export const DESCRIPTIONS = {
 	},
 
 	NEED_RESOURCE_CUSTOMIZATION: {
-		displayName: 'Need Resource Customization(是否需要会议室表单信息)',
+		displayName: t.NEED_RESOURCE_CUSTOMIZATION,
 		name: 'need_resource_customization',
 		type: 'boolean',
 		default: false,
@@ -1438,7 +1378,7 @@ export const DESCRIPTIONS = {
 	},
 
 	MEETING_CHAT_ID: {
-		displayName: 'Meeting Chat ID(会议群 ID)',
+		displayName: t.MEETING_CHAT_ID,
 		name: 'meeting_chat_id',
 		type: 'string',
 		required: true,

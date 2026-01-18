@@ -1,8 +1,9 @@
 import { ResourceType } from '../../help/type/enums';
 import { ResourceOptions } from '../../help/type/IResource';
+import { WORDING } from '../../help/wording';
 
 export default {
-	name: 'Space(云空间)',
+	name: WORDING.ResourceSpace,
 	value: ResourceType.Space,
 	order: 150,
 } as ResourceOptions;
