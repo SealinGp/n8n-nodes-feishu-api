@@ -1,5 +1,5 @@
 {
-	"name": "n8n-nodes-lark",
+	"name": "n8n-nodes-feishu",
 	"version": "1.1.0",
 	"description": "n8n custom nodes for n8n to interact with Feishu/Lark, including Lark Bot, Lark MCP, and Lark Trigger.",
 	"keywords": [
@@ -13,13 +13,13 @@
 		"feishu-bot"
 	],
 	"license": "MIT",
-	"homepage": "https://github.com/SealinGp/n8n-nodes-lark#readme",
+	"homepage": "https://github.com/SealinGp/n8n-nodes-feishu#readme",
 	"author": {
 		"name": "SealinGp"
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/SealinGp/n8n-nodes-lark.git"
+		"url": "git+https://github.com/SealinGp/n8n-nodes-feishu.git"
 	},
 	"engines": {
 		"node": ">=20.15"
