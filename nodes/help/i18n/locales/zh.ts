@@ -53,6 +53,7 @@ export const WORDING_ZH: IWording = {
 
 	// Message
 	SendMessage: '发送消息',
+	BatchSendMessage: '批量发送消息',
 	ReplyMessage: '回复消息',
 	EditMessage: '编辑消息',
 	ForwardMessage: '转发消息',

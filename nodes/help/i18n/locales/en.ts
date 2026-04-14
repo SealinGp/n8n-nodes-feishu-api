@@ -53,6 +53,7 @@ export const WORDING_EN: IWording = {
 
 	// Message
 	SendMessage: 'Send',
+	BatchSendMessage: 'Batch Send',
 	ReplyMessage: 'Reply',
 	EditMessage: 'Edit',
 	ForwardMessage: 'Forward',

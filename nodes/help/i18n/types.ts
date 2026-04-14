@@ -64,6 +64,7 @@ export interface IWording {
 
 	// Message
 	SendMessage: string;
+	BatchSendMessage: string;
 	ReplyMessage: string;
 	EditMessage: string;
 	ForwardMessage: string;

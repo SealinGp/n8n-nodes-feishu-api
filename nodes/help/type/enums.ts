@@ -81,6 +81,7 @@ export declare const enum OperationType {
 
 	// Message
 	SendMessage = 'send',
+	BatchSendMessage = 'batchSend',
 	ReplyMessage = 'reply',
 	EditMessage = 'edit',
 	ForwardMessage = 'forward',
