@@ -13,13 +13,13 @@
 		"feishu-bot"
 	],
 	"license": "MIT",
-	"homepage": "https://github.com/SealinGp/n8n-nodes-feishu#readme",
+	"homepage": "https://github.com/SealinGp/n8n-nodes-feishu-api#readme",
 	"author": {
 		"name": "SealinGp"
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/SealinGp/n8n-nodes-feishu.git"
+		"url": "git+https://github.com/SealinGp/n8n-nodes-feishu-api.git"
 	},
 	"engines": {
 		"node": ">=20.15"
