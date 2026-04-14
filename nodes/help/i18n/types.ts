@@ -179,6 +179,7 @@ export interface IWording {
 	ResourceSpreadsheet: string;
 	ResourceCalendar: string;
 	ResourceWiki: string;
+	ResourceTask: string;
 }
 
 /**

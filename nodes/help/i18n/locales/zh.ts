@@ -168,4 +168,5 @@ export const WORDING_ZH: IWording = {
 	ResourceSpreadsheet: '表格',
 	ResourceCalendar: '日历',
 	ResourceWiki: '知识空间',
+	ResourceTask: '任务',
 };

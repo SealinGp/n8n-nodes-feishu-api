@@ -168,4 +168,5 @@ export const WORDING_EN: IWording = {
 	ResourceSpreadsheet: 'Spreadsheet',
 	ResourceCalendar: 'Calendar',
 	ResourceWiki: 'Wiki',
+	ResourceTask: 'Task',
 };

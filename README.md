@@ -1,10 +1,6 @@
-[English](https://github.com/zhgqthomas/n8n-nodes-feishu-lark/blob/main/README-EN.md)
+# n8n-nodes-lark
 
-# n8n-nodes-feishu-lark
-
-本项目是基于 [n8n-nodes-feishu-lite](https://github.com/other-blowsnow/n8n-nodes-feishu-lite) 的二次开发，感谢原作者的开源贡献。在原有功能基础上增加了 `LarkTrigger`、`LarkMCP` 节点以及多项操作优化。
-
-> 原始仓库：[https://github.com/zhgqthomas/n8n-nodes-feishu-lark](https://github.com/zhgqthomas/n8n-nodes-feishu-lark)
+本项目 fork 自 [n8n-nodes-feishu-lark](https://github.com/zhgqthomas/n8n-nodes-feishu-lark)，感谢原作者的开源贡献。在原有功能基础上修复了若干问题并新增了知识空间、任务等资源支持。
 
 ---
 
