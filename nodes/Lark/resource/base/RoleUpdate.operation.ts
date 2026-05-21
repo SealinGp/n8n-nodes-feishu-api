@@ -34,7 +34,7 @@ export default {
 			data: { role },
 		} = await RequestUtils.request.call(this, {
 			method: 'PUT',
-			url: `/open-apis/base/v2/apps/${app_token}/roles/${role_id}`,
+			url: `/open-apis/bitable/v1/apps/${app_token}/roles/${role_id}`,
 			body,
 		});
 

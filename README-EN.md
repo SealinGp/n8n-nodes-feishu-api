@@ -138,9 +138,9 @@ Select `Lark OAuth2 API`, fill in `App ID` (Client ID) and `App Secret` (Client 
 | Update Field | `PUT /open-apis/bitable/v1/apps/:app_token/tables/:table_id/fields/:field_id` |
 | Get Fields | `GET /open-apis/bitable/v1/apps/:app_token/tables/:table_id/fields` |
 | Delete Field | `DELETE /open-apis/bitable/v1/apps/:app_token/tables/:table_id/fields/:field_id` |
-| Create Role | `POST /open-apis/base/v2/apps/:app_token/roles` |
-| Update Role | `PUT /open-apis/base/v2/apps/:app_token/roles/:role_id` |
-| Get Roles | `GET /open-apis/base/v2/apps/:app_token/roles` |
+| Create Role | `POST /open-apis/bitable/v1/apps/:app_token/roles` |
+| Update Role | `PUT /open-apis/bitable/v1/apps/:app_token/roles/:role_id` |
+| Get Roles | `GET /open-apis/bitable/v1/apps/:app_token/roles` |
 | Delete Role | `DELETE /open-apis/bitable/v1/apps/:app_token/roles/:role_id` |
 | Create Role Member | `POST /open-apis/bitable/v1/apps/:app_token/roles/:role_id/members` |
 | Batch Create Role Members | `POST /open-apis/bitable/v1/apps/:app_token/roles/:role_id/members/batch_create` |

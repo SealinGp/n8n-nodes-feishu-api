@@ -93,7 +93,7 @@ export async function larkApiRequestBaseRoleList(
 			data: { has_more, page_token, items },
 		} = await RequestUtils.request.call(this, {
 			method: 'GET',
-			url: `/open-apis/base/v2/apps/${app_token}/roles`,
+			url: `/open-apis/bitable/v1/apps/${app_token}/roles`,
 			qs: {
 				...(pageToken && { page_token: pageToken }),
 				page_size: 100,

@@ -138,9 +138,9 @@ n8n-nodes-feishu-api
 | 更新字段 | `PUT /open-apis/bitable/v1/apps/:app_token/tables/:table_id/fields/:field_id` |
 | 列出字段 | `GET /open-apis/bitable/v1/apps/:app_token/tables/:table_id/fields` |
 | 删除字段 | `DELETE /open-apis/bitable/v1/apps/:app_token/tables/:table_id/fields/:field_id` |
-| 新增自定义角色 | `POST /open-apis/base/v2/apps/:app_token/roles` |
-| 更新自定义角色 | `PUT /open-apis/base/v2/apps/:app_token/roles/:role_id` |
-| 列出自定义角色 | `GET /open-apis/base/v2/apps/:app_token/roles` |
+| 新增自定义角色 | `POST /open-apis/bitable/v1/apps/:app_token/roles` |
+| 更新自定义角色 | `PUT /open-apis/bitable/v1/apps/:app_token/roles/:role_id` |
+| 列出自定义角色 | `GET /open-apis/bitable/v1/apps/:app_token/roles` |
 | 删除自定义角色 | `DELETE /open-apis/bitable/v1/apps/:app_token/roles/:role_id` |
 | 新增协作者 | `POST /open-apis/bitable/v1/apps/:app_token/roles/:role_id/members` |
 | 批量新增协作者 | `POST /open-apis/bitable/v1/apps/:app_token/roles/:role_id/members/batch_create` |
