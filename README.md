@@ -215,6 +215,7 @@ n8n-nodes-feishu-api
 | 创建任务 | `POST /open-apis/task/v2/tasks` |
 | 更新任务 | `PUT /open-apis/task/v2/tasks/:task_guid` |
 | 获取任务详情 | `GET /open-apis/task/v2/tasks/:task_guid` |
+| 列取任务列表 | `GET /open-apis/task/v2/tasks` |
 | 删除任务 | `DELETE /open-apis/task/v2/tasks/:task_guid` |
 | 添加任务成员 | `POST /open-apis/task/v2/tasks/:task_guid/add_members` |
 | 移除任务成员 | `POST /open-apis/task/v2/tasks/:task_guid/remove_members` |

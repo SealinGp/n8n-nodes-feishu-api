@@ -215,6 +215,7 @@ Select `Lark OAuth2 API`, fill in `App ID` (Client ID) and `App Secret` (Client 
 | Create | `POST /open-apis/task/v2/tasks` |
 | Update | `PUT /open-apis/task/v2/tasks/:task_guid` |
 | Get Info | `GET /open-apis/task/v2/tasks/:task_guid` |
+| Get List | `GET /open-apis/task/v2/tasks` |
 | Delete | `DELETE /open-apis/task/v2/tasks/:task_guid` |
 | Add Members | `POST /open-apis/task/v2/tasks/:task_guid/add_members` |
 | Remove Members | `POST /open-apis/task/v2/tasks/:task_guid/remove_members` |
