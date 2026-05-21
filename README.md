@@ -42,7 +42,7 @@ n8n-nodes-feishu-api
 | 操作 | API |
 |------|-----|
 | 发送消息 | `POST /open-apis/im/v1/messages` |
-| 批量发送消息 | `POST /open-apis/message/v4/batch_send/` |
+| 批量发送消息 | `POST /open-apis/im/v1/batch_messages` |
 | 回复消息 | `POST /open-apis/im/v1/messages/:message_id/reply` |
 | 编辑消息 | `PUT /open-apis/im/v1/messages/:message_id` |
 | 转发消息 | `POST /open-apis/im/v1/messages/:message_id/forward` |
@@ -216,6 +216,7 @@ n8n-nodes-feishu-api
 | 更新任务 | `PUT /open-apis/task/v2/tasks/:task_guid` |
 | 获取任务详情 | `GET /open-apis/task/v2/tasks/:task_guid` |
 | 列取任务列表 | `GET /open-apis/task/v2/tasks` |
+| 获取清单任务列表 | `GET /open-apis/task/v2/tasklists/:tasklist_guid/tasks` |
 | 删除任务 | `DELETE /open-apis/task/v2/tasks/:task_guid` |
 | 添加任务成员 | `POST /open-apis/task/v2/tasks/:task_guid/add_members` |
 | 移除任务成员 | `POST /open-apis/task/v2/tasks/:task_guid/remove_members` |

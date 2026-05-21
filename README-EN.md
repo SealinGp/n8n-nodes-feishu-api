@@ -42,7 +42,7 @@ Select `Lark OAuth2 API`, fill in `App ID` (Client ID) and `App Secret` (Client 
 | Operation | API |
 |-----------|-----|
 | Send | `POST /open-apis/im/v1/messages` |
-| Batch Send | `POST /open-apis/message/v4/batch_send/` |
+| Batch Send | `POST /open-apis/im/v1/batch_messages` |
 | Reply | `POST /open-apis/im/v1/messages/:message_id/reply` |
 | Edit | `PUT /open-apis/im/v1/messages/:message_id` |
 | Forward | `POST /open-apis/im/v1/messages/:message_id/forward` |
@@ -216,6 +216,7 @@ Select `Lark OAuth2 API`, fill in `App ID` (Client ID) and `App Secret` (Client 
 | Update | `PUT /open-apis/task/v2/tasks/:task_guid` |
 | Get Info | `GET /open-apis/task/v2/tasks/:task_guid` |
 | Get List | `GET /open-apis/task/v2/tasks` |
+| Get Tasks in Tasklist | `GET /open-apis/task/v2/tasklists/:tasklist_guid/tasks` |
 | Delete | `DELETE /open-apis/task/v2/tasks/:task_guid` |
 | Add Members | `POST /open-apis/task/v2/tasks/:task_guid/add_members` |
 | Remove Members | `POST /open-apis/task/v2/tasks/:task_guid/remove_members` |

@@ -108,15 +108,17 @@ export default {
 			);
 		}
 
-		const body: IDataObject = { msg_type };
+		// im/v1/batch_messages requires `content` as a JSON-stringified string
+		// for ALL msg_types, including interactive (no separate `card` field).
+		const rawContent =
+			msg_type === 'interactive'
+				? (NodeUtils.getNodeJsonData(this, 'card', index) as IDataObject)
+				: (NodeUtils.getNodeJsonData(this, 'content', index) as IDataObject);
 
-		if (msg_type === 'interactive') {
-			const card = NodeUtils.getNodeJsonData(this, 'card', index) as IDataObject;
-			body.card = card;
-		} else {
-			const content = NodeUtils.getNodeJsonData(this, 'content', index) as IDataObject;
-			body.content = content;
-		}
+		const body: IDataObject = {
+			msg_type,
+			content: JSON.stringify(rawContent),
+		};
 
 		if (open_ids.length) body.open_ids = open_ids;
 		if (user_ids.length) body.user_ids = user_ids;
@@ -125,7 +127,7 @@ export default {
 
 		const { code, msg, data } = await RequestUtils.request.call(this, {
 			method: 'POST',
-			url: '/open-apis/message/v4/batch_send/',
+			url: '/open-apis/im/v1/batch_messages',
 			body,
 		});
 
@@ -133,6 +135,8 @@ export default {
 			throw new Error(`Batch send message failed, code: ${code}, message: ${msg}`);
 		}
 
+		// v1 returns only { message_id } synchronously. For invalid recipient lists,
+		// call GET /open-apis/im/v1/batch_messages/:batch_message_id/get_progress.
 		return data as IDataObject;
 	},
 } as ResourceOperation;
