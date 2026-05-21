@@ -41,6 +41,7 @@ export default {
 			displayName: 'Page Token(分页标记)',
 			name: 'page_token',
 			type: 'string',
+			typeOptions: { password: true },
 			default: '',
 			description: 'Token for the next page. Only used when Return All is disabled.',
 			displayOptions: {
