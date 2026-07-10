@@ -1,5 +1,7 @@
 import { IDataObject, IExecuteFunctions } from 'n8n-workflow';
 import { ResourceOperation } from '../../../help/type/IResource';
+import { WORDING } from '../../../help/wording';
+import { OperationType } from '../../../help/type/enums';
 import NodeUtils from '../../../help/utils/node';
 import RequestUtils from '../../../help/utils/RequestUtils';
 
@@ -22,8 +24,8 @@ function normalizeStringArray(value: unknown): string[] {
 }
 
 export default {
-	name: 'Create Approval Instance | 创建审批实例',
-	value: 'createInstance',
+	name: WORDING.CreateApprovalInstance,
+	value: OperationType.CreateApprovalInstance,
 	order: 100,
 	options: [
 		{

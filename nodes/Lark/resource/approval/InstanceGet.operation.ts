@@ -1,10 +1,12 @@
 import { IDataObject, IExecuteFunctions } from 'n8n-workflow';
 import { ResourceOperation } from '../../../help/type/IResource';
+import { WORDING } from '../../../help/wording';
+import { OperationType } from '../../../help/type/enums';
 import RequestUtils from '../../../help/utils/RequestUtils';
 
 export default {
-	name: 'Get Approval Instance | 获取审批实例',
-	value: 'getInstance',
+	name: WORDING.GetApprovalInstance,
+	value: OperationType.GetApprovalInstance,
 	order: 90,
 	options: [
 		{
