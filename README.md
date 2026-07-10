@@ -2,7 +2,7 @@
 
 # n8n-nodes-feishu-api
 
-本项目 fork 自 [n8n-nodes-feishu-lark](https://github.com/zhgqthomas/n8n-nodes-feishu-lark)，感谢原作者的开源贡献。在原有功能基础上修复了若干问题并新增了知识空间、任务等资源支持。
+本项目 fork 自 [n8n-nodes-feishu-lark](https://github.com/zhgqthomas/n8n-nodes-feishu-lark)，感谢原作者的开源贡献。在原有功能基础上修复了若干问题并新增了知识空间、任务、审批等资源支持。
 
 ---
 
@@ -207,6 +207,13 @@ n8n-nodes-feishu-api
 |------|-----|
 | 批量获取用户信息 | `POST /open-apis/contact/v3/users/batch_get_id` |
 | 获取用户信息 | `GET /open-apis/contact/v3/users/:user_id` |
+
+### 审批（Approval）
+
+| 操作 | API |
+|------|-----|
+| 创建审批实例 | `POST /open-apis/approval/v4/instances` |
+| 获取审批实例 | `GET /open-apis/approval/v4/instances/:instance_code` |
 
 ### 任务（Task）
 

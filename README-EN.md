@@ -2,7 +2,7 @@
 
 # n8n-nodes-feishu-api
 
-This project is forked from [n8n-nodes-feishu-lark](https://github.com/zhgqthomas/n8n-nodes-feishu-lark). Thanks to the original author for their open-source contribution. This fork fixes several bugs and adds support for Wiki Spaces and Task resources.
+This project is forked from [n8n-nodes-feishu-lark](https://github.com/zhgqthomas/n8n-nodes-feishu-lark). Thanks to the original author for their open-source contribution. This fork fixes several bugs and adds support for Wiki Spaces, Task, and Approval resources.
 
 ---
 
@@ -207,6 +207,13 @@ Select `Lark OAuth2 API`, fill in `App ID` (Client ID) and `App Secret` (Client 
 |-----------|-----|
 | Batch Get User Info | `POST /open-apis/contact/v3/users/batch_get_id` |
 | Get User Info | `GET /open-apis/contact/v3/users/:user_id` |
+
+### Approval
+
+| Operation | API |
+|-----------|-----|
+| Create Approval Instance | `POST /open-apis/approval/v4/instances` |
+| Get Approval Instance | `GET /open-apis/approval/v4/instances/:instance_code` |
 
 ### Task
 
