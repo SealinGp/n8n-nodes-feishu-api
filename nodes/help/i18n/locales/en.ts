@@ -151,6 +151,10 @@ export const WORDING_EN: IWording = {
 	CalendarMeetingChatCreate: 'Create Meeting Chat',
 	CalendarMeetingChatUnbind: 'Unbind Meeting Chat',
 
+	// Approval
+	CreateApprovalInstance: 'Create Approval Instance',
+	GetApprovalInstance: 'Get Approval Instance',
+
 	// MCP
 	GetToolList: 'List Tools',
 	ExecuteTool: 'Execute Tool',
@@ -161,6 +165,7 @@ export const WORDING_EN: IWording = {
 	OpenDocument: 'Open official document',
 
 	// Resource Names
+	ResourceApproval: 'Approval',
 	ResourceBase: 'Base',
 	ResourceMessage: 'Message',
 	ResourceDocument: 'Document',

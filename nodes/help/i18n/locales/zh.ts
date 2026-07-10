@@ -151,6 +151,10 @@ export const WORDING_ZH: IWording = {
 	CalendarMeetingChatCreate: '创建会议群',
 	CalendarMeetingChatUnbind: '解绑会议群',
 
+	// Approval
+	CreateApprovalInstance: '创建审批实例',
+	GetApprovalInstance: '获取审批实例',
+
 	// MCP
 	GetToolList: '获取工具列表',
 	ExecuteTool: '执行工具',
@@ -161,6 +165,7 @@ export const WORDING_ZH: IWording = {
 	OpenDocument: '浏览官方文档',
 
 	// Resource Names
+	ResourceApproval: '审批',
 	ResourceBase: '多维表格',
 	ResourceMessage: '消息',
 	ResourceDocument: '文档',

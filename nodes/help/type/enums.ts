@@ -16,6 +16,7 @@ export declare const enum MessageType {
 }
 
 export declare const enum ResourceType {
+	Approval = 'approval',
 	Base = 'base',
 	Calendar = 'calendar',
 	Contacts = 'contacts',
@@ -174,6 +175,10 @@ export declare const enum OperationType {
 	GetCalendarEventAttendeeList = 'getEventAttendeeList',
 	CreateCalendarMeetingChat = 'createMeetingChat',
 	UnbindCalendarMeetingChat = 'unbindMeetingChat',
+
+	// Approval
+	CreateApprovalInstance = 'createInstance',
+	GetApprovalInstance = 'getInstance',
 
 	// MCP
 	ListTools = 'listTools',

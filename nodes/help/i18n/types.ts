@@ -162,6 +162,10 @@ export interface IWording {
 	CalendarMeetingChatCreate: string;
 	CalendarMeetingChatUnbind: string;
 
+	// Approval
+	CreateApprovalInstance: string;
+	GetApprovalInstance: string;
+
 	// MCP
 	GetToolList: string;
 	ExecuteTool: string;
@@ -172,6 +176,7 @@ export interface IWording {
 	OpenDocument: string;
 
 	// Resource Names
+	ResourceApproval: string;
 	ResourceBase: string;
 	ResourceMessage: string;
 	ResourceDocument: string;
