@@ -1,5 +1,6 @@
 import { IDataObject, IExecuteFunctions } from 'n8n-workflow';
 import { ResourceOperation } from '../../../help/type/IResource';
+import { WORDING } from '../../../help/wording';
 import RequestUtils from '../../../help/utils/RequestUtils';
 
 export default {
@@ -7,6 +8,12 @@ export default {
 	value: 'getTasklistTasks',
 	order: 94,
 	options: [
+		{
+			displayName: `<a target="_blank" href="https://open.feishu.cn/document/task-v2/tasklist/tasks">${WORDING.OpenDocument}</a>`,
+			name: 'notice',
+			type: 'notice',
+			default: '',
+		},
 		{
 			displayName: 'Tasklist GUID(清单 GUID)',
 			name: 'tasklist_guid',
@@ -134,9 +141,7 @@ export default {
 			});
 
 			if (code !== 0) {
-				throw new Error(
-					`Get tasks in tasklist failed, code: ${code}, message: ${msg}`,
-				);
+				throw new Error(`Get tasks in tasklist failed, code: ${code}, message: ${msg}`);
 			}
 
 			const { has_more, page_token, items } = data as {

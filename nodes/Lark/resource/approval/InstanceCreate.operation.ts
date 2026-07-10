@@ -29,6 +29,12 @@ export default {
 	order: 100,
 	options: [
 		{
+			displayName: `<a target="_blank" href="https://open.feishu.cn/document/server-docs/approval-v4/instance/create">${WORDING.OpenDocument}</a>`,
+			name: 'notice',
+			type: 'notice',
+			default: '',
+		},
+		{
 			displayName: 'Approval Code(审批定义 Code)',
 			name: 'approval_code',
 			type: 'string',
@@ -89,7 +95,7 @@ export default {
 			name: 'approver_node_id',
 			type: 'string',
 			default: '',
-			description: 'Node ID from the approval definition when approvers are chosen at submit time.',
+			description: 'Node ID from the approval definition when approvers are chosen at submit time',
 		},
 		{
 			displayName: 'Approver User IDs(审批人用户 ID 列表)',
@@ -103,7 +109,8 @@ export default {
 			name: 'body',
 			type: 'json',
 			default: '{}',
-			description: 'Extra fields merged into the request body. Values here override generated defaults.',
+			description:
+				'Extra fields merged into the request body. Values here override generated defaults.',
 		},
 	],
 	async call(this: IExecuteFunctions, index: number): Promise<IDataObject> {

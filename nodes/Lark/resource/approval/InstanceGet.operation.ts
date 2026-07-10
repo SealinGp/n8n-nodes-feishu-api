@@ -10,6 +10,12 @@ export default {
 	order: 90,
 	options: [
 		{
+			displayName: `<a target="_blank" href="https://open.feishu.cn/document/server-docs/approval-v4/instance/get">${WORDING.OpenDocument}</a>`,
+			name: 'notice',
+			type: 'notice',
+			default: '',
+		},
+		{
 			displayName: 'Instance Code(审批实例 Code)',
 			name: 'instance_code',
 			type: 'string',

@@ -1,5 +1,6 @@
 import { IDataObject, IExecuteFunctions } from 'n8n-workflow';
 import { ResourceOperation } from '../../../help/type/IResource';
+import { WORDING } from '../../../help/wording';
 import NodeUtils from '../../../help/utils/node';
 import RequestUtils from '../../../help/utils/RequestUtils';
 
@@ -17,6 +18,12 @@ export default {
 	value: 'addMembers',
 	order: 90,
 	options: [
+		{
+			displayName: `<a target="_blank" href="https://open.feishu.cn/document/task-v2/task/add_members">${WORDING.OpenDocument}</a>`,
+			name: 'notice',
+			type: 'notice',
+			default: '',
+		},
 		{
 			displayName: 'Task ID(任务ID)',
 			name: 'task_guid',

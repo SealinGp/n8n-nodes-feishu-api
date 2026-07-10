@@ -9,6 +9,12 @@ export default {
 	name: WORDING.GetUserInfo,
 	value: OperationType.GetUserInfo,
 	options: [
+		{
+			displayName: `<a target="_blank" href="https://open.feishu.cn/document/server-docs/contact-v3/user/get">${WORDING.OpenDocument}</a>`,
+			name: 'notice',
+			type: 'notice',
+			default: '',
+		},
 		DESCRIPTIONS.USER_ID_TYPE,
 		{
 			...DESCRIPTIONS.MEMBER_ID,

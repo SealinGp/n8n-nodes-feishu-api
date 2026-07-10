@@ -60,7 +60,15 @@ export default {
 	name: WORDING.ParseMessageContent,
 	value: OperationType.ParseMessageContent,
 	order: 100,
-	options: [DESCRIPTIONS.RECEIVE_MESSAGE_TYPES],
+	options: [
+		{
+			displayName: `<a target="_blank" href="https://open.feishu.cn/document/server-docs/im-v1/message/events/receive">${WORDING.OpenDocument}</a>`,
+			name: 'notice',
+			type: 'notice',
+			default: '',
+		},
+		DESCRIPTIONS.RECEIVE_MESSAGE_TYPES,
+	],
 
 	async call(this: IExecuteFunctions, index: number): Promise<IDataObject> {
 		const inputData = this.getInputData() as INodeExecutionData[];

@@ -1,12 +1,19 @@
 import { IDataObject, IExecuteFunctions } from 'n8n-workflow';
 import RequestUtils from '../../../help/utils/RequestUtils';
 import { ResourceOperation } from '../../../help/type/IResource';
+import { WORDING } from '../../../help/wording';
 
 export default {
 	name: '获取知识空间节点信息',
 	value: 'getSpaceNodeInfo',
 	order: 90,
 	options: [
+		{
+			displayName: `<a target="_blank" href="https://open.feishu.cn/document/server-docs/docs/wiki-v2/space-node/get_node">${WORDING.OpenDocument}</a>`,
+			name: 'notice',
+			type: 'notice',
+			default: '',
+		},
 		{
 			displayName: '节点Token',
 			name: 'token',

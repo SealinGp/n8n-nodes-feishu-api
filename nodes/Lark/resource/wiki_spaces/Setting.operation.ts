@@ -1,12 +1,19 @@
 import { IDataObject, IExecuteFunctions } from 'n8n-workflow';
 import RequestUtils from '../../../help/utils/RequestUtils';
 import { ResourceOperation } from '../../../help/type/IResource';
+import { WORDING } from '../../../help/wording';
 
 export default {
 	name: '更新知识空间设置',
 	value: 'updateSpaceSettings',
 	order: 98,
 	options: [
+		{
+			displayName: `<a target="_blank" href="https://open.feishu.cn/document/server-docs/docs/wiki-v2/space-setting/update">${WORDING.OpenDocument}</a>`,
+			name: 'notice',
+			type: 'notice',
+			default: '',
+		},
 		{
 			displayName: '知识空间ID',
 			name: 'space_id',

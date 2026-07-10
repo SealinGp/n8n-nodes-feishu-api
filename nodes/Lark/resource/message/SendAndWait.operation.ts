@@ -18,6 +18,12 @@ export default {
 	action: 'Send message and wait',
 	order: 1,
 	options: [
+		{
+			displayName: `<a target="_blank" href="https://open.feishu.cn/document/server-docs/im-v1/message/create">${WORDING.OpenDocument}</a>`,
+			name: 'notice',
+			type: 'notice',
+			default: '',
+		},
 		DESCRIPTIONS.RECEIVE_ID_TYPE,
 		{
 			...DESCRIPTIONS.MEMBER_ID,

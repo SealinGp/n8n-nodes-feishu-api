@@ -9,7 +9,16 @@ export default {
 	name: WORDING.CreateSheet,
 	value: OperationType.CreateSheet,
 	order: 187,
-	options: [DESCRIPTIONS.SPREADSHEET_ID, DESCRIPTIONS.TITLE],
+	options: [
+		{
+			displayName: `<a target="_blank" href="https://open.feishu.cn/document/server-docs/docs/sheets-v2/spreadsheet-sheet/create">${WORDING.OpenDocument}</a>`,
+			name: 'notice',
+			type: 'notice',
+			default: '',
+		},
+		DESCRIPTIONS.SPREADSHEET_ID,
+		DESCRIPTIONS.TITLE,
+	],
 	async call(this: IExecuteFunctions, index: number): Promise<IDataObject> {
 		const spreadsheetId = this.getNodeParameter('spreadsheet_id', index, undefined, {
 			extractValue: true,

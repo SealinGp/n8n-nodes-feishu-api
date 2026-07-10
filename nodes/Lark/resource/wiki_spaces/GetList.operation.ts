@@ -1,12 +1,19 @@
 import { IDataObject, IExecuteFunctions } from 'n8n-workflow';
 import RequestUtils from '../../../help/utils/RequestUtils';
 import { ResourceOperation } from '../../../help/type/IResource';
+import { WORDING } from '../../../help/wording';
 
 export default {
 	name: '获取知识空间列表',
 	value: 'getWikiSpaceList',
 	order: 100,
 	options: [
+		{
+			displayName: `<a target="_blank" href="https://open.feishu.cn/document/server-docs/docs/wiki-v2/space/list">${WORDING.OpenDocument}</a>`,
+			name: 'notice',
+			type: 'notice',
+			default: '',
+		},
 		{
 			displayName: '每页大小',
 			name: 'page_size',

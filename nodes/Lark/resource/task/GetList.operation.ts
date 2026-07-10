@@ -1,5 +1,6 @@
 import { IDataObject, IExecuteFunctions } from 'n8n-workflow';
 import { ResourceOperation } from '../../../help/type/IResource';
+import { WORDING } from '../../../help/wording';
 import RequestUtils from '../../../help/utils/RequestUtils';
 
 export default {
@@ -7,6 +8,12 @@ export default {
 	value: 'getList',
 	order: 95,
 	options: [
+		{
+			displayName: `<a target="_blank" href="https://open.feishu.cn/document/task-v2/task/list">${WORDING.OpenDocument}</a>`,
+			name: 'notice',
+			type: 'notice',
+			default: '',
+		},
 		{
 			displayName: 'User ID Type(用户 ID 类型)',
 			name: 'user_id_type',
@@ -23,7 +30,8 @@ export default {
 			name: 'return_all',
 			type: 'boolean',
 			default: true,
-			description: 'Whether to auto-paginate and return all tasks. When disabled, only one page is returned.',
+			description:
+				'Whether to auto-paginate and return all tasks. When disabled, only one page is returned.',
 		},
 		{
 			displayName: 'Page Size(分页大小)',
@@ -84,14 +92,16 @@ export default {
 					name: 'start_create_time',
 					type: 'string',
 					default: '',
-					description: 'Filter tasks created after this timestamp (millisecond, e.g. 1675844827000)',
+					description:
+						'Filter tasks created after this timestamp (millisecond, e.g. 1675844827000)',
 				},
 				{
 					displayName: 'End Create Time(任务创建结束时间)',
 					name: 'end_create_time',
 					type: 'string',
 					default: '',
-					description: 'Filter tasks created before this timestamp (millisecond, e.g. 1675844827000)',
+					description:
+						'Filter tasks created before this timestamp (millisecond, e.g. 1675844827000)',
 				},
 			],
 		},

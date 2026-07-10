@@ -24,6 +24,12 @@ export default {
 	order: 100,
 	options: [
 		{
+			displayName: `<a target="_blank" href="https://open.feishu.cn/document/server-docs/im-v1/message/create">${WORDING.OpenDocument}</a>`,
+			name: 'notice',
+			type: 'notice',
+			default: '',
+		},
+		{
 			displayName:
 				'Tip: Get a feel with the quick <a href="https://github.com/zhgqthomas/n8n-nodes-feishu-lark/blob/main/README.md#send-streaming-message" target="_blank">tutorial</a> or see an <a href="https://github.com/zhgqthomas/n8n-nodes-feishu-lark/blob/main/demo/send_streaming_message.json" target="_blank">example</a> of how this node works',
 			name: 'streamMessageStarterCallout',
