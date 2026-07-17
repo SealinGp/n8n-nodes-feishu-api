@@ -47,10 +47,11 @@ export default {
 			type: 'options',
 			options: [
 				{ name: 'Open ID', value: 'open_id' },
-				{ name: 'Union ID', value: 'union_id' },
 				{ name: 'User ID', value: 'user_id' },
 			],
 			default: 'open_id',
+			description:
+				'This endpoint identifies the applicant/approvers by dedicated body fields (user_id vs open_id), NOT by a query parameter. Union ID is not supported here.',
 		},
 		{
 			displayName: 'Applicant User ID(发起人用户 ID)',
@@ -140,14 +141,26 @@ export default {
 			},
 		]);
 
+		const isOpenId = userIdType === 'open_id';
+
+		// The approval "create instance" endpoint does NOT honor the `user_id_type`
+		// query parameter. The applicant and approvers are identified by dedicated
+		// body fields instead, and the caller must place the value in the field that
+		// matches the selected ID type:
+		//   applicant -> `open_id`  OR `user_id`
+		//   approvers -> `node_approver_open_id_list` OR `node_approver_user_id_list`
+		// Passing an open_id in the `user_id` field triggers `1390001 用户ID不正确`.
 		const body: IDataObject = {
 			approval_code: approvalCode,
-			user_id: userId,
 			form,
+			...(isOpenId ? { open_id: userId } : { user_id: userId }),
 		};
 
 		if (approverNodeId && approverUserIds.length > 0) {
-			body.node_approver_user_id_list = [
+			const approverListKey = isOpenId
+				? 'node_approver_open_id_list'
+				: 'node_approver_user_id_list';
+			body[approverListKey] = [
 				{
 					key: approverNodeId,
 					value: approverUserIds,
@@ -158,9 +171,6 @@ export default {
 		const response = await RequestUtils.request.call(this, {
 			method: 'POST',
 			url: '/open-apis/approval/v4/instances',
-			qs: {
-				user_id_type: userIdType,
-			},
 			body: {
 				...body,
 				...extraBody,
