@@ -437,7 +437,10 @@ export function getSendAndWaitConfig(
 
 	const responseType = NodeUtils.getNodeParameter(context, 'responseType', 'approval') as string;
 
-	context.setSignatureValidationRequired();
+	if (typeof context.setSignatureValidationRequired === 'function') {
+		context.setSignatureValidationRequired();
+	}
+
 	const approvedSignedResumeUrl = context.getSignedResumeUrl({ approved: 'true' });
 
 	if (responseType === 'freeText' || responseType === 'customForm') {
